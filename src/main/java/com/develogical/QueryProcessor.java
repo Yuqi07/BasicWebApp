@@ -11,6 +11,6 @@ public class QueryProcessor {
         else if (query.toLowerCase().contains("yuqi")) {
             return "the most gorgeous lady in the world.";
         }
-        return "";
+        return "New query";
     }
 }
