@@ -13,7 +13,7 @@ public class QueryProcessor {
         // }
         int idx = query.indexOf("largest:");
         idx += 9;
-        string[] nums = query.substring(idx);
+        string nums = query.substring(idx);
         String[] allNums = nums.split(",%");
         int ans = 0;
         for(int i = 0; i < allNums.length; i ++){
