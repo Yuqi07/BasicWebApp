@@ -11,7 +11,7 @@ public class QueryProcessor {
         // else if (query.toLowerCase().contains("yuqi")) {
         //     return "the most gorgeous lady in the world.";
         // }
-        else if (toLowerCase().contains("largest:")) {
+        else if (query.toLowerCase().contains("largest:")) {
             int idx = query.indexOf("largest:");
             idx += 9;
             String nums = query.substring(idx);
