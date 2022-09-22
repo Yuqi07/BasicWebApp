@@ -8,9 +8,11 @@ public class QueryProcessor {
                     "English poet, playwright, and actor, widely regarded as the greatest " +
                     "writer in the English language and the world's pre-eminent dramatist.";
         }
-        else if (query.toLowerCase().contains("yuqi")) {
-            return "the most gorgeous lady in the world.";
-        }
-        return "New query";
+        // else if (query.toLowerCase().contains("yuqi")) {
+        //     return "the most gorgeous lady in the world.";
+        // }
+        allNums = Arrays.asList(query.split("\\s*,\\s*"));
+        return str(Collections.max(allNums));
+        // return "New query";
     }
 }
