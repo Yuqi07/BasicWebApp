@@ -11,17 +11,19 @@ public class QueryProcessor {
         // else if (query.toLowerCase().contains("yuqi")) {
         //     return "the most gorgeous lady in the world.";
         // }
-        int idx = query.indexOf("largest:");
-        idx += 9;
-        String nums = query.substring(idx);
-        String[] allNums = nums.split(",%");
-        int ans = 0;
-        for(int i = 0; i < allNums.length; i ++){
-            if (Integer.parseInt(allNums[i]) > ans) {
-                ans = Integer.parseInt(allNums[i]);
+        else if (toLowerCase().contains("largest:")) {
+            int idx = query.indexOf("largest:");
+            idx += 9;
+            String nums = query.substring(idx);
+            String[] allNums = nums.split(",%");
+            int ans = 0;
+            for(int i = 0; i < allNums.length; i ++){
+                if (Integer.parseInt(allNums[i]) > ans) {
+                    ans = Integer.parseInt(allNums[i]);
+                }
             }
+            return String.valueOf(ans);
         }
-        return String.valueOf(ans);
-        // return "New query";
+        return "";
     }
 }
